@@ -5,7 +5,7 @@
 Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+Analyze data related to bikeshare systems for three cities in the United States 
 
 ### Files used
 bikeshare.py
