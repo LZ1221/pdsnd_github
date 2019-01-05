@@ -17,11 +17,11 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    while True:  
+    while True:
         city = input("Please enter city name:").lower()
         if city in ['chicago','new york city', 'washington']:
             break
-        else: 
+        else:
             print("City Name Not Valid")
 
     # TO DO: get user input for month (all, january, february, ... , june)
@@ -33,13 +33,13 @@ def get_filters():
         print("Month Name Not Valid")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    while True: 
-        day=input("please enter a day of week:").lower() 
+    while True:
+        day=input("please enter a day of week:").lower()
         if day in ['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']:
             break
     else:
         print("Day Name Not Valid")
-        
+
     print('-'*40)
     return city, month, day
 
@@ -47,7 +47,7 @@ def get_filters():
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-    
+
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -76,9 +76,9 @@ def time_stats(df):
 
     # TO DO: display the most common month
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    df['Month'] = df['Start Time'].dt.month 
+    df['Month'] = df['Start Time'].dt.month
     common_month = df['Month'].mode()[0]
-    print('Most common month:',common_month) 
+    print('Most common month:',common_month)
     # TO DO: display the most common day of week
     df['Day'] = df['Start Time'].dt.weekday
     common_day = df['Day'].mode()[0]
@@ -94,7 +94,7 @@ def time_stats(df):
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
-    
+
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
@@ -148,7 +148,7 @@ def user_stats(df):
         print()
     except KeyError:
         print("There isn't a [Gender] column in this spreadsheet!")
-        
+
     # TO DO: Display earliest, most recent, and most common year of birth
     try:
         min_birth=df['Birth Year'].min()
@@ -162,15 +162,15 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
-def display(df): 
-    display = input('Would you like to see raw data?\n') 
-    counter = 0 
-    while display.lower() == "yes": 
-        print (df.iloc[counter:counter + 5]) 
-        display = input('\n whether user want to see next 5 records of raw data? \n') 
+    # To display raw data upon user's input 
+def display(df):
+    display = input('Would you like to see raw data?\n')
+    counter = 0
+    while display.lower() == "yes":
+        print (df.iloc[counter:counter + 5])
+        display = input('\n whether user want to see next 5 records of raw data? \n')
         counter += 5
-       
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -181,7 +181,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
