@@ -74,7 +74,7 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # TO DO: display the most common month of travel times 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['Month'] = df['Start Time'].dt.month
     common_month = df['Month'].mode()[0]
@@ -162,7 +162,7 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    # To display raw data upon user's input 
+    # To display raw data upon user's input
 def display(df):
     display = input('Would you like to see raw data?\n')
     counter = 0
