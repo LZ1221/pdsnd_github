@@ -5,7 +5,7 @@ Bikshare.py is created on 12.29.2018
 Bikeshare Project
 
 ### Description
-Analyze data related to bikeshare systems for three cities in the United States 
+Goal of this project is to Analyze data related to bikeshare systems for three cities in the United States 
 
 ### Files used
 bikeshare.py
