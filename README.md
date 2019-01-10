@@ -1,5 +1,5 @@
 ### Date created
-12.29.2018
+Bikshare.py is created on 12.29.2018
 
 ### Project Title
 Bikeshare Project
