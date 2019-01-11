@@ -2,7 +2,7 @@
 File is created on December 29, 2018
 
 ### Project Title
-Bikeshare Project
+Udacity: Bikeshare Project
 
 ### Description
 Project is to analyze data related to bikeshare systems for three cities in the United States 
