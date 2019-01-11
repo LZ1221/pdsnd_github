@@ -8,7 +8,7 @@ Bikeshare Project
 Project is to analyze data related to bikeshare systems for three cities in the United States 
 
 ### Files used
-The following files are used: chicago.csv, new_york_city.csv, washington.csv
+Files Used: chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
 Udacity Introduction to Python 
